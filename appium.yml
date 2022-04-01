@@ -1,0 +1,12 @@
+FROM appium/appium 
+
+ENV ANDROID_ADB_SERVER_PORT=5037
+ENV ANDROID_ADB_SERVER_ADDRESS=gateway.docker.internal
+
+RUN mkdir -p apps
+COPY apps/ApiDemos-debug.apk ./apps
+
+RUN mkdir -p chromedrivers/linux
+COPY chromedrivers/linux/chromedriver ./chromedrivers/linux/
+
+RUN apt-get -y install iputils-ping
