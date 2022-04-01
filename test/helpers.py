@@ -27,7 +27,7 @@ ANDROID_DOCKER_CAPS = {
     'deviceName': 'device',
     'showChromedriverLog': True,
     'remoteAdbHost': 'gateway.docker.internal',
-    'chromedriverArgs': ["--whitelisted-ips='gateway.docker.internal'"] 
+    #'chromedriverArgs': ["--whitelisted-ips='gateway.docker.internal'"] 
 }
 
 ANDROID_CAPS = ANDROID_BASE_CAPS if not IS_DOCKER else ANDROID_DOCKER_CAPS
